@@ -19,6 +19,11 @@ const pool = new Pool({
 
 pool.connect()
 
+export const getNotes = async () => {
+  const { rows } = await pool.query(`SELECT * FROM notes`)
+  return rows
+}
+
 export const getDriver = async (number: string) => {
   const { rows } = await pool.query(`SELECT name FROM notes WHERE number = $1`, [number])
   return rows[0].name
