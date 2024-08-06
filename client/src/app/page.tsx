@@ -8,11 +8,9 @@ const Home = () => {
   const [name, setName] = useState('')
 
   const handleClick = () => {
-    axios
-      .get(`https://notes-backend-tawny.vercel.app/api/driver/${number}`)
-      .then((res) => {
-        setName(res.data)
-      })
+    axios.get(`http://localhost:9090/api/driver/${number}`).then((res) => {
+      setName(res.data)
+    })
   }
 
   return (
