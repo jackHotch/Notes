@@ -1,5 +1,11 @@
+import { Navbar } from '@/components'
+
 const Home = () => {
-  return <div>First Commit</div>
+  return (
+    <>
+      <Navbar />
+    </>
+  )
 }
 
 export default Home
