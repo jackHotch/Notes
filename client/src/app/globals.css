@@ -1,3 +1,9 @@
+:root {
+  --yellow: #ffc600;
+  --yellowHover: #ffc000;
+  --lightgray: lightgray;
+}
+
 @font-face {
   font-family: 'Fira Code';
   src: url('/fonts/FiraCode-VariableFont_wght.ttf')
@@ -6,13 +12,10 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: rgb(43, 43, 43);
+  color: white;
 }
 
 * {
   font-family: 'Fira Code';
-}
-
-:root {
-  --yellow: #ffc600;
-  --yellowHover: #ffc000;
 }
