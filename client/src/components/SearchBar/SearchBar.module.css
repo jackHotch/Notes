@@ -1,0 +1,26 @@
+.input {
+  display: flex;
+  align-items: center;
+  background-color: var(--lightgray);
+  width: max-content;
+  height: max-content;
+  border-radius: 40px;
+  padding: 2px 20px;
+  margin: 50px auto;
+}
+
+.input input {
+  width: 400px;
+  height: 35px;
+  background-color: var(--lightgray);
+  border: none;
+  font-size: 15px;
+}
+
+.input input:focus {
+  outline: none;
+}
+
+#clear_btn, #search_btn {
+  cursor: pointer;
+}
