@@ -1,10 +1,7 @@
 import pg from 'pg'
 const { Pool } = pg
 import dotenv from 'dotenv'
-
 dotenv.config()
-
-const env = process.env.NODE_ENV
 
 const SSL = process.env.POSTGRES_SSL === 'true' ? true : false
 
@@ -24,7 +21,7 @@ export const getNotes = async () => {
   return rows
 }
 
-export const getDriver = async (number: string) => {
-  const { rows } = await pool.query(`SELECT name FROM notes WHERE number = $1`, [number])
-  return rows[0].name
+export const getNote = async (id: string) => {
+  const { rows } = await pool.query(`SELECT * FROM notes WHERE id = $1`, [id])
+  return rows[0]
 }
