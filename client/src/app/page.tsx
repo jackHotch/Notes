@@ -7,13 +7,13 @@ import { INote } from './globals'
 
 const Home = () => {
   const { data: notes } = useNotes()
-  const [filteredData, setFilteredData] = useState<INote[] | undefined>(notes)
+  const [filteredData, setFilteredData] = useState<INote[] | undefined>()
 
   return (
     <>
       <Navbar />
       <SearchBar data={notes} setFilteredData={setFilteredData} />
-      <NotesList notes={filteredData} />
+      <NotesList filteredNotes={filteredData} />
     </>
   )
 }
