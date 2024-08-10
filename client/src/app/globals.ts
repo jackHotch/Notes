@@ -24,5 +24,10 @@ export interface SearchBarProps {
 }
 
 export interface NotesListProps {
-  notes: INote[] | undefined
+  filteredNotes: INote[] | undefined
+}
+
+export interface NotePreviewProps {
+  id: number
+  title: string
 }

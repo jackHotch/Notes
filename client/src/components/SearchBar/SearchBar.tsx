@@ -15,7 +15,7 @@ export const SearchBar = ({ data, setFilteredData }: SearchBarProps) => {
     const newFilter = data?.filter((value) => {
       return value.title.toLowerCase().includes(searchWord.toLowerCase())
     })
-    if (searchWord === '') setFilteredData([])
+    if (searchWord === '') setFilteredData(data)
     else setFilteredData(newFilter)
   }
 
